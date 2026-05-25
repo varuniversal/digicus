@@ -16,14 +16,14 @@ operation on their own, and then turning the display back on to check their work
 
 ## Project Progress
 
-* Design Requirements \[Completed\]
-* Design Specifications \[Completed\]
-* Component Selection \[Completed\]
-* Schematic Design \[Completed\]
-* Functional Prototype \[In-Progress\]
-* Firmware \[In-Progress\]
-* Board Layout \[To-Do\]
-* Board Manufacturing and Testing \[To-Do\]
+* Design Requirements \[**Completed**\]
+* Design Specifications \[**Completed**\]
+* Component Selection \[**Completed**\]
+* Schematic Design \[**Completed**\]
+* Functional Prototype \[**In-Progress**\]
+* Firmware \[**In-Progress**\]
+* Board Layout \[**To-Do**\]
+* Board Manufacturing and Testing \[**To-Do**\]
 
 ********************************
 
