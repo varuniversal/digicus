@@ -12,12 +12,35 @@ the beads, enabling direct visual feedback of the current state of the abacus.  
 also be turned off, allowing the user to practice inputting a number or performing an arithmetic
 operation on their own, and then turning the display back on to check their work.
 
+********************************
+
 ## Project Progress
+
+* Design Requirements \[Completed\]
+* Design Specifications \[Completed\]
+* Component Selection \[Completed\]
+* Schematic Design \[Completed\]
+* Functional Prototype \[In-Progress\]
+* Firmware \[In-Progress\]
+* Board Layout \[To-Do\]
+* Board Manufacturing and Testing \[To-Do\]
+
 ********************************
-*  $${\color{green}\text{Completed}   \color{orange}\text{In-Progress}}$$   \text{To-Do}   *
-********************************
 
+## Sections
 
-* [Header Link](#header)
+* [Design Requirements](#design-requirements)
+* [Design Specifications](#design-specifications)
+* [Component Selection](#component-selection)
+* [Schematic Design](#schematic-design)
+* [Functional Prototype](#functional-prototype)
 
-## Header
+## Design Requirements
+
+## Design Specifications
+
+## Component Selection
+
+## Schematic Design
+
+## Functional Prototype
