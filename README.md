@@ -14,7 +14,7 @@ operation on their own, and then turning the display back on to check their work
 
 ## Project Progress
 ********************************
-*  $${\color{green}Completed   \color{orange}In-Progress}$$   To-Do   *
+*  $${\color{green}\text{Completed}   \color{orange}\text{In-Progress}}$$   \text{To-Do}   *
 ********************************
 
 
