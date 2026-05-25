@@ -34,6 +34,7 @@ operation on their own, and then turning the display back on to check their work
 * [Component Selection](#component-selection)
 * [Schematic Design](#schematic-design)
 * [Functional Prototype](#functional-prototype)
+* [Firmware](#firmware)
 
 ## Design Requirements
 
@@ -44,3 +45,5 @@ operation on their own, and then turning the display back on to check their work
 ## Schematic Design
 
 ## Functional Prototype
+
+## Firmware
