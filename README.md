@@ -38,7 +38,27 @@ operation on their own, and then turning the display back on to check their work
 
 ## Design Requirements
 
+The following are my determined requirements for this design:
+
+1. The Digicus must have enough columns of "beads" to perform useful calculations.
+1. The Digicus must have an intuitive input method for interacting with the "beads".
+1. The Digicus should be highly responsive to all inputs, reacting immediately.
+1. The Digicus must be able to be operated portably, i.e. not have to be tethered to an
+   outlet or cumbersome power supply for it to function.
+1. The Digicus must be small enough to be portable, but large enough to be used
+   comfortably.
+
 ## Design Specifications
+
+The following are the design specifications along with the number of the design requirement that
+they address in brackets:
+
+* The Digicus will have 8 columns of 5 LEDs, for a total of 40 bead LEDs. \[1\]
+    - The lower 4 LEDs will be red, with the upper LED being amber.  This adds an additional
+        visual differentiatior between the heaven bead and the earth beads.
+* The Digicus will use three pushbuttons per column of LEDs for interacting with the "beads". \[2\]
+    - Two of the pushbuttons will be used for "pushing up" and "pushing down" earth beads with
+      the third bead toggling the heaven bead.
 
 ## Component Selection
 
