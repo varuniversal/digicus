@@ -71,12 +71,12 @@ that they address in brackets:
       voltage output by a linear regulator will be lost as heat.  Any high frequency switching noise
       of the switching regulator will not be an issue since there are no high frequency data signals
       present in this design.
-* The Digicus will use the Microchip ATMega328-PB microcontroller to run the device. \[3\]
-    - The ATMega328-PB is cost-effective, easy to program, and can clock up to 10MHz at the
+* The Digicus will use the Microchip ATmega328PB microcontroller to run the device. \[3\]
+    - The ATmega328PB is cost-effective, easy to program, and can clock up to 10MHz at the
       desired 3.3V supply voltage, which is plenty fast enough for this application.
-    - The ATMega328-PB provides two independent I2C buses as well as two independent SPI buses,
+    - The ATmega328PB provides two independent I2C buses as well as two independent SPI buses,
       allowing for communication to the display, programming interface, and any other IC needed.
-    - The ATMega328-PB is available as a VQFN package, allowing for a small vertical footprint.
+    - The ATmega328PB is available as a VQFN package, allowing for a small vertical footprint.
 * The Digicus will employ the use of shift registers to expand the effective I/O of the MCU in order
   to interface with the large number of LEDs and pushbuttons.
 * The Digicus will use a small OLED as its primary display. \[6\]
@@ -87,6 +87,28 @@ that they address in brackets:
 ## Component Selection
 
 ## Schematic Design
+
+The Digicus schematic can be broken down into five major blocks:
+
+* [Power Supply and Programming Interface](#power-supply-and-programming-interface)
+* [Display](#display)
+* [Shift Register Bank](#shift-register-bank)
+* [Shift Register Outputs](#shift-register-outputs)
+* [Microcontroller Connections](#microcontroller-connections)
+
+Each will be described briefly in this section alongside an image of its section in the schematic.
+The full schematic of the design can be viewed as a PDF in
+[schematics/digicus-schematic.pdf](schematics/digicus-schematic.png).
+
+### Power Supply and Programming Interface
+
+### Display
+
+### Shift Register Bank
+
+### Shift Register Outputs
+
+### Microcontroller Connections
 
 ## Functional Prototype
 
