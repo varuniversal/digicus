@@ -98,7 +98,7 @@ The Digicus schematic can be broken down into five major blocks:
 
 Each will be described briefly in this section alongside an image of its section in the schematic.
 The full schematic of the design can be viewed as a PDF in
-[schematics/digicus-schematic.pdf](schematics/digicus-schematic.png).
+[schematics/digicus-schematic.pdf](schematics/digicus-schematic.pdf).
 
 ### Power Supply and Programming Interface
 
