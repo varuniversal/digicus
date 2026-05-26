@@ -47,18 +47,42 @@ The following are my determined requirements for this design:
    outlet or cumbersome power supply for it to function.
 1. The Digicus must be small enough to be portable, but large enough to be used
    comfortably.
+1. The Digicus must feature a display that consumes relatively low power and is legible
+   in well-lit environments.
 
 ## Design Specifications
 
-The following are the design specifications along with the number of the design requirement that
-they address in brackets:
+The following are the design specifications along with the number of the design requirement, if any,
+that they address in brackets:
 
 * The Digicus will have 8 columns of 5 LEDs, for a total of 40 bead LEDs. \[1\]
     - The lower 4 LEDs will be red, with the upper LED being amber.  This adds an additional
         visual differentiatior between the heaven bead and the earth beads.
-* The Digicus will use three pushbuttons per column of LEDs for interacting with the "beads". \[2\]
-    - Two of the pushbuttons will be used for "pushing up" and "pushing down" earth beads with
-      the third bead toggling the heaven bead.
+* The Digicus will use three pushbuttons per column of LEDs for interacting with the "beads",
+  as well as a button for resetting the abacus to zero, for a total of 25 pushbuttons. \[2\]
+    - Two of the pushbuttons for each column will be used for "pushing up" and "pushing down"
+      earth beads with the third bead toggling the heaven bead.
+* The Digicus will be powered by three NiMH AAA batteries in series or an external source, fed to a
+  switching voltage regulator for a 3.3V supply voltage. \[4\], \[5\]
+    - Using AAA batteries allows for an easily available, rechargeable, and relatively compact
+      power source, close to the desired 3.3V supply voltage.
+    - Employing a switching regulator instead of a linear regulator will allow for higher efficiency
+      since the difference between the 3.6V provided by the series batteries and the 3.3V supply
+      voltage output by a linear regulator will be lost as heat.  Any high frequency switching noise
+      of the switching regulator will not be an issue since there are no high frequency data signals
+      present in this design.
+* The Digicus will use the Microchip ATMega328-PB microcontroller to run the device. \[3\]
+    - The ATMega328-PB is cost-effective, easy to program, and can clock up to 10MHz at the
+      desired 3.3V supply voltage, which is plenty fast enough for this application.
+    - The ATMega328-PB provides two independent I2C buses as well as two independent SPI buses,
+      allowing for communication to the display, programming interface, and any other IC needed.
+    - The ATMega328-PB is available as a VQFN package, allowing for a small vertical footprint.
+* The Digicus will employ the use of shift registers to expand the effective I/O of the MCU in order
+  to interface with the large number of LEDs and pushbuttons.
+* The Digicus will use a small OLED as its primary display. \[6\]
+    - An OLED display will consume less power than a comparable LCD or seven segment display array, and
+      provides a very high contrast ratio for easy viewing.
+
 
 ## Component Selection
 
