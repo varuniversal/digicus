@@ -107,9 +107,31 @@ The full schematic of the design can be viewed as a PDF in
 
 ![Power Supply and Programming Interface](images/power-programming-schematic.png)
 
+The Digicus's 3.3V supply voltage is provided by the TI TPS63001 buck-boost converter, which is fed
+either by a battery pack of three AAA NiMH batteries in series, or by an external DC source through
+the Vcc_ext and GND connections of the 6-pin ISP interface.  External supply voltage must be within
+1.8V - 5.5V to comply with the input range of the TPS63001.
+
+The 6-pin ISP interface provides power, a connection to the MCU's reset pin, and connection to one of
+the SPI buses of the MCU.  This allows for easy field programming of the MCU to flash firmware or power
+the Digicus externally if desired.
+
+The SP3T power switch allows the user to switch between the battery source, the external source, or
+to turn the device off.
+
 ### Display
 
 ![Display and Toggle Switch](images/display-toggle-schematic.png)
+
+The display of the Digicus is a 128x32 OLED module built around the SSD1306 driver IC. The display
+module already has integrated pull-up resistors in its front-end circuitry for the SDA and SCL
+connections as well as a bypass capacitor across the power connections, which is why they are omitted
+in my circuit.
+
+The toggle switch shown adjacent to the display is connected to one of the hardware interrupt pins
+of the MCU, and is set up such that the flipping of the switch triggers an interrupt that will read
+the level of the same pin to determine the switch's orientation.  This allows for the up and down
+position of the switch to always correspond to a single state of the OLED (on or off).
 
 ### Shift Register Bank
 
