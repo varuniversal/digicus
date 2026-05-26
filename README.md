@@ -135,7 +135,25 @@ position of the switch to always correspond to a single state of the OLED (on or
 
 ### Shift Register Bank
 
+![Shift Register Top Level Block](images/srbank-block-schematic.png)
+
+Above is a top level view of the shift register bank's inputs and output.  The operation of the shift register bank
+requires only six external connections.  The MOSI and SCK pins of one of the SPI buses, two digital output
+pins for latching the register's input state to its output and clearing the registers, a pull-down of the active-low
+output enable pin since it does not need to be turned off in this design, and finally a connection to one of the external
+interrupt pins of the MCU.
+
 ![Shift Register Bank](images/srbank-schematic.png)
+
+The LEDs making up the "beads" of the Digicus as well as the pushbuttons acting as an input interface
+to interact with the LEDs are all controlled by the bank of eight TI SN74HC595 shift registers shown above.
+
+![Shift Register Slice](images/srbank-slice-schematic.png)
+
+Looking closer, each shift register has eight outputs, five allocated for a column of LED "beads" and three
+for controlling the state of the pushbuttons. The MOSI connection from the MCU is connected to the first
+register, with each following register being fed by the shifted out output of the previous one.  The four other
+external connections are common to each register.
 
 ### Shift Register Outputs
 
