@@ -86,6 +86,9 @@ that they address in brackets:
 
 ## Component Selection
 
+The major components of the design will be specified in this section.  All passive components were selected with
+proper derating, tolerances, and packaging in mind, but will not be specified here for brevity.
+
 ## Schematic Design
 
 The Digicus schematic can be broken down into five major blocks:
@@ -102,13 +105,23 @@ The full schematic of the design can be viewed as a PDF in
 
 ### Power Supply and Programming Interface
 
+![Power Supply and Programming Interface](images/power-programming-schematic.png)
+
 ### Display
+
+![Display and Toggle Switch](images/display-toggle-schematic.png)
 
 ### Shift Register Bank
 
+![Shift Register Bank](images/srbank-schematic.png)
+
 ### Shift Register Outputs
 
+![Shift Register Outputs](images/sr-output-schematic.png)
+
 ### Microcontroller Connections
+
+![Microcontroller Connections](images/mcu-schematic.png)
 
 ## Functional Prototype
 
