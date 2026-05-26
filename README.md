@@ -152,7 +152,7 @@ to interact with the LEDs are all controlled by the bank of eight TI SN74HC595 s
 
 Looking closer, each shift register has eight outputs, five allocated for a column of LED "beads" and three
 for controlling the state of the pushbuttons. The MOSI connection from the MCU is connected to the first
-register, with each following register being fed by the shifted out output of the previous one.  The four other
+register, with each following registers being fed by the shifted out output of the previous ones.  The four other
 external connections are common to each register.
 
 ### Shift Register Outputs
