@@ -31,7 +31,6 @@ operation on their own, and then turning the display back on to check their work
 
 * [Design Requirements](#design-requirements)
 * [Design Specifications](#design-specifications)
-* [Component Selection](#component-selection)
 * [Schematic Design](#schematic-design)
 * [Functional Prototype](#functional-prototype)
 * [Firmware](#firmware)
@@ -82,12 +81,6 @@ that they address in brackets:
 * The Digicus will use a small OLED as its primary display. \[6\]
     - An OLED display will consume less power than a comparable LCD or seven segment display array, and
       provides a very high contrast ratio for easy viewing.
-
-
-## Component Selection
-
-The major components of the design will be specified in this section.  All passive components were selected with
-proper derating, tolerances, and packaging in mind, but will not be specified here for brevity.
 
 ## Schematic Design
 
