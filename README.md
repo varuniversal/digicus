@@ -151,17 +151,33 @@ to interact with the LEDs are all controlled by the bank of eight TI SN74HC595 s
 ![Shift Register Slice](images/srbank-slice-schematic.png)
 
 Looking closer, each shift register has eight outputs, five allocated for a column of LED "beads" and three
-for controlling the state of the pushbuttons. The MOSI connection from the MCU is connected to the first
-register, with each following registers being fed by the shifted out output of the previous ones.  The four other
-external connections are common to each register.
+for controlling the state of the pushbuttons. The MOSI connection from the MCU is connected to the serial input
+of the first register, with each following register being fed by the shifted out output of the previous one.
+The four other external connections are common to each register.
 
 ### Shift Register Outputs
 
 ![Shift Register Outputs](images/sr-output-schematic.png)
 
+Each shift register outputs to a block like that shown above.  Five of the outputs control the five LEDs that make
+up a "bead" column.  The other three connect to pushbuttons that are all tied together to one of the MCU's hardware
+interrupt pins.  The pushbuttons of each output block are all tied together to the same interrupt pin.  The way
+that they are differentiated from each other is done in firmware and will be elaborated on in the firmware section.
+
+A low voltage drop schottky diode is placed in series with each push button to protect the shift register outputs
+from shorting in the case when multiple buttons are pressed simultaneously with their corresponding shift register outputs
+set to different states.
+
 ### Microcontroller Connections
 
 ![Microcontroller Connections](images/mcu-schematic.png)
+
+The block above shows all of the connections to the MCU.  All the connections shown have been discussed in
+the previous sections, except for the circuit at pin 12, which is a pushbutton set to activate an interrupt
+which clears the state of the Digicus, effectively setting it to represent zero.
+
+Since both of the dedicated hardware interrupt pins are already used, pin 12 is configured to be used
+as a pin change interrupt pin, utilizing one of the four available pin change interrupt banks of the MCU.
 
 ## Functional Prototype
 
