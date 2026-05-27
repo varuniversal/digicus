@@ -20,7 +20,7 @@ operation on their own, and then turning the display back on to check their work
 * Design Specifications \[**Completed**\]
 * Component Selection \[**Completed**\]
 * Schematic Design \[**Completed**\]
-* Functional Prototype \[**In-Progress**\]
+* Small Scale Prototype \[**In-Progress**\]
 * Firmware \[**In-Progress**\]
 * Board Layout \[**To-Do**\]
 * Board Manufacturing and Testing \[**To-Do**\]
@@ -32,8 +32,7 @@ operation on their own, and then turning the display back on to check their work
 * [Design Requirements](#design-requirements)
 * [Design Specifications](#design-specifications)
 * [Schematic Design](#schematic-design)
-* [Functional Prototype](#functional-prototype)
-* [Firmware](#firmware)
+* [Small Scale Prototype](#small-scale-prototype)
 
 ## Design Requirements
 
@@ -172,6 +171,25 @@ which clears the state of the Digicus, effectively setting it to represent zero.
 Since both of the dedicated hardware interrupt pins are already used, pin 12 is configured to be used
 as a pin change interrupt pin, utilizing one of the four available pin change interrupt banks of the MCU.
 
-## Functional Prototype
+## Small Scale Prototype
 
-## Firmware
+As a proof of concept, a smaller scale prototype of the Digicus was built on perfboard, stripping out some of
+the features that will be on the final board, such as the display toggle switch.  The prototype contains only two
+columns of LEDs, and is primarily meant to be used to validate the core firmware implementation for the
+pushbutton interface, as well as provide a development environment for writing a firmware library to interact with
+the OLED while the final board is being layed out.
+
+In the prototype, the older ATmega328-PU is used in place of the ATmega328PB as, unlike the ATmega328PB, it is
+available in a DIP-28 package for easy prototyping.  It provides very similar functionality to the ATmega328PB
+and has an almost identical programming interface, allowing the firmware written for the prototype to be
+almost completely transferrable to the final board.  Through hole LEDs are also used in place of the SMD LEDs
+on the final board.
+
+Below are pictures of the prototype.
+
+![Prototype Front](images/prototype-front.jpg)
+
+![Prototype Back](images/prototype-back.jpg)
+
+The top DIP-28 socket is where the ATmega328-PU will be placed, and the lower two DIP-16 sockets will house
+two TI SN74HC595 shift registers in their DIP-16 package variant.
