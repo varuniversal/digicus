@@ -22,7 +22,7 @@ operation on their own, and then turning the display back on to check their work
 * Schematic Design \[**Completed**\]
 * Small Scale Prototype \[**In-Progress**\]
 * Firmware \[**In-Progress**\]
-* Board Layout \[**To-Do**\]
+* Board Layout \[**In-Progress**\]
 * Board Manufacturing and Testing \[**To-Do**\]
 
 ********************************
