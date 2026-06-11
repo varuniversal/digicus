@@ -83,11 +83,12 @@ that they address in brackets:
 
 ## Schematic Design
 
-The Digicus schematic can be broken down into five major blocks:
+The Digicus schematic can be broken down into six major blocks:
 
 * [Power Supply and Programming Interface](#power-supply-and-programming-interface)
 * [Display](#display)
 * [Shift Register Bank](#shift-register-bank)
+* [Clock Distribution Tree](#clock-distribution-tree)
 * [Shift Register Outputs](#shift-register-outputs)
 * [Microcontroller Connections](#microcontroller-connections)
 
@@ -115,10 +116,8 @@ to turn the device off.
 
 ![Display and Toggle Switch](images/display-toggle-schematic.png)
 
-The display of the Digicus is a 128x32 OLED module built around the SSD1306 driver IC. The display
-module already has integrated pull-up resistors in its front-end circuitry for the SDA and SCL
-connections as well as a bypass capacitor across the power connections, which is why they are omitted
-in my circuit.
+The display of the Digicus is a 128x32 OLED module built around the SSD1306 driver IC, operated through one
+of the MCU's I2C bus connections.
 
 The toggle switch shown adjacent to the display is connected to one of the hardware interrupt pins
 of the MCU, and is set up such that the flipping of the switch triggers an interrupt that will read
@@ -144,8 +143,18 @@ to interact with the LEDs are all controlled by the bank of eight TI SN74HC595 s
 
 Looking closer, each shift register has eight outputs, five allocated for a column of LED "beads" and three
 for controlling the state of the pushbuttons. The MOSI connection from the MCU is connected to the serial input
-of the first register, with each following register being fed by the shifted out output of the previous one.
-The four other external connections are common to each register.
+of the first register, with each following register being fed by the shifted-out output of the previous one.
+The SCK input of each register is fed through a fan-out clock distribution tree to ensure each IC receives 
+as similar and clean a clock waveform as possible. The three other external connections are common to each register.
+
+### Clock Distribution Tree
+
+![Clock Distribution Tree](images/clock-tree-schematic.png)
+
+The SPI clock signal feeding the shift register bank is distributed through the clock fan-out tree shown above.
+The tree is composed of Texas Instruments LMK1C1102DQFR 1:2 clock buffer ICs, which takes the original clock signal
+from the MCU and fans it out such that each shift register receives its own direct clock signal, minimizing distortion
+of the clock.
 
 ### Shift Register Outputs
 
