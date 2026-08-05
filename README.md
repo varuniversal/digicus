@@ -175,11 +175,8 @@ set to different states.
 ![Microcontroller Connections](images/mcu-schematic.png)
 
 The block above shows all of the connections to the MCU.  All the connections shown have been discussed in
-the previous sections, except for the circuit at pin 12, which is a pushbutton set to activate an interrupt
+the previous sections, except for the connection at pin 1, which is a pushbutton set to activate an interrupt
 which clears the state of the Digicus, effectively setting it to represent zero.
-
-Since both of the dedicated hardware interrupt pins are already used, pin 12 is configured to be used
-as a pin change interrupt pin, utilizing one of the four available pin change interrupt banks of the MCU.
 
 ## Small Scale Prototype
 
