@@ -33,6 +33,7 @@ operation on their own, and then turning the display back on to check their work
 * [Design Specifications](#design-specifications)
 * [Schematic Design](#schematic-design)
 * [Small Scale Prototype](#small-scale-prototype)
+* [Board Layout](#board-layout)
 
 ## Design Requirements
 
@@ -202,3 +203,5 @@ Below are pictures of the prototype.
 
 The top DIP-28 socket is where the ATmega328-PU will be placed, and the lower two DIP-16 sockets will house
 two TI SN74HC595 shift registers in their DIP-16 package variant.
+
+## Board Layout
