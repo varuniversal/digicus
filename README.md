@@ -20,10 +20,10 @@ operation on their own, and then turning the display back on to check their work
 * Design Specifications \[**Completed**\]
 * Component Selection \[**Completed**\]
 * Schematic Design \[**Completed**\]
-* Small Scale Prototype \[**In-Progress**\]
+* Small Scale Prototype \[**Completed**\]
+* Board Layout \[**Completed**\]
+* Board Manufacturing and Testing \[**In-Progress**\]
 * Firmware \[**In-Progress**\]
-* Board Layout \[**In-Progress**\]
-* Board Manufacturing and Testing \[**To-Do**\]
 
 ********************************
 
