@@ -202,3 +202,14 @@ The top DIP-28 socket is where the ATmega328-PU will be placed, and the lower tw
 two TI SN74HC595 shift registers in their DIP-16 package variant.
 
 ## Board Layout
+
+![Board Layout](images/board-layout.png)
+
+![Power Input Layout](images/power-layout.png)
+
+![VRM and MCU Layout](images/VRM-MCU-layout.png)
+
+![Display, Toggle Switch, and LED Clear Button Layout](images/display-toggle-clear-layout.png)
+
+![Shift Register Layout](images/shift-register-layout.png)
+
