@@ -1,4 +1,4 @@
-# Digicus (In-Progress)
+# Digicus
 A digital abacus trainer modeled after the Japanese Soroban.  The columns of beads are represented
 by eight columns of five LEDs, with a toggleable OLED display showing in real time the numerical
 number represented by the columns.  Beads can be "pushed up or down" by the use of pushbuttons
@@ -202,6 +202,8 @@ The top DIP-28 socket is where the ATmega328-PU will be placed, and the lower tw
 two TI SN74HC595 shift registers in their DIP-16 package variant.
 
 ## Board Layout
+
+![3D Model](images/3D-model.png)
 
 ![Board Layout](images/board-layout.png)
 
