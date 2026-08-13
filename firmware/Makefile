@@ -1,7 +1,7 @@
 # Digicus Firmware Makefile
 # Author: Varun Rajput
 
-DEVICE     = atmega328pb
+DEVICE     = m328pb
 CLOCK      = 8000000
 PORT_LX    = /dev/ttyACM0
 PORT_MAC   = /dev/tty.usbmodemfa131
