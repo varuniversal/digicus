@@ -7,7 +7,7 @@ PORT_LX    = /dev/ttyACM0
 PORT_MAC   = /dev/tty.usbmodemfa131
 PROGRAMMER = -c usbtiny 
 OBJECTS    = main.o
-FUSES      = -U lfuse:w:0xe2:m -U hfuse:w:0xde:m -U efuse:w:0x05:m
+FUSES      = -U lfuse:w:0xe2:m -U hfuse:w:0xde:m -U efuse:w:0xfd:m
 LOCAL_SOURCE = 
 AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE) -B 10
 COMPILE = avr-gcc -Wall -Os -Iusbdrv -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
