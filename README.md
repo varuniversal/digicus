@@ -203,11 +203,28 @@ two TI SN74HC595 shift registers in their DIP-16 package variant.
 
 ## Board Layout
 
-![3D Model](images/3D-model.png)
+### Top Layer
+![Top Layer Board Layout](images/top-board-layout.png)
 
-![Board Layout](images/board-layout.png)
+### Bottom Layer
+![Bottom Layer Board Layout](images/bottom-board-layout.png)
+
+Above are images of the full 2-layer board layout.  The power nets are shown in red, the ground net is shown in
+gray, the programming SPI bus is shown in green, the display I2C bus is shown in pink, the shift
+register SPI bus is shown in orange, the digital control signals of the shift registers are shown in blue, the
+interrupt lines are shown in cyan, the shift register outputs controlling the LEDs are shown in purple, and the 
+outputs controlling the state of the push buttons is shown in green.
+
+Almost all of the signal routing was done in the top layer, with a minimal amount of vias being used to route traces
+on the bottom layer, allowing for an almost uninterrupted bottom ground plane.  When via routing was necessary,
+it was done with minimal length traces and under slow-speed control signal lines.
 
 ![Power Input Layout](images/power-layout.png)
+
+Above is a close-up of the power input traces and the programming header.  It can be seen how the SP3T switch is
+used to connect the +Vin net to either the battery input, the Vcc input of the programming header, or be
+disconnected from either.  The connection from the Vcc input to its test point is done on the bottom layer, routed
+beneath the RST control signal trace.
 
 ![VRM and MCU Layout](images/VRM-MCU-layout.png)
 
@@ -215,3 +232,4 @@ two TI SN74HC595 shift registers in their DIP-16 package variant.
 
 ![Shift Register Layout](images/shift-register-layout.png)
 
+![3D Model](images/3D-model.png)
