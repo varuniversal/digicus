@@ -228,6 +228,9 @@ beneath the RST control signal trace.
 
 ![VRM and MCU Layout](images/VRM-MCU-layout.png)
 
+Above is a close-up of the VRM and MCU layouts.  The layout of the VRM and its supporting circuitry was done mostly
+in accordance to the suggested layout in the VRM's documentation.
+
 ![Display, Toggle Switch, and LED Clear Button Layout](images/display-toggle-clear-layout.png)
 
 ![Shift Register Layout](images/shift-register-layout.png)
