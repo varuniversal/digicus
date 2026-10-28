@@ -34,6 +34,7 @@ operation on their own, and then turning the display back on to check their work
 * [Schematic Design](#schematic-design)
 * [Small Scale Prototype](#small-scale-prototype)
 * [Board Layout](#board-layout)
+* [Board Manufacturing and Testing](#board-manufacturing-and-testing)
 
 ## Design Requirements
 
@@ -236,3 +237,31 @@ in accordance to the suggested layout in the VRM's documentation.
 ![Shift Register Layout](images/shift-register-layout.png)
 
 ![3D Model](images/3D-model.png)
+
+
+## Board Manufacturing and Testing
+
+![Front of PCB](images/pcb-front.jpg)
+![Back of PCB](images/pcb-back.jpg)
+
+Above are images of the front and back of the manufactured PCBA with all components assembled.  All SMD components
+were placed and soldered by the PCB fabricator while all through-hole components were soldered myself.
+
+### Testing
+
+Small pieces of test firmware isolating major subcircuits and buses are used to check that all the circuitry is
+functioning correctly before the final device firmware is written.  The current testing progress is shown below.
+
+#### Completed
+
+* Battery and External Power Rails
+* 3.3V VRM and Rail
+* MCU SPI Programming Bus
+* Shift Register SPI Bus
+* All LEDs
+
+#### To-Do
+
+* OLED Display I2C Bus
+* Pushbutton Interrupt Lines
+* Toggle Switch Interrupt Line
